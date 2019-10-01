@@ -873,7 +873,7 @@ public class Library {
 
 		/* Filling Loan Book's Table */
 		for (int i = 0; i < finepaids.size(); i++) {
-			template = "INSERT INTO LOAN(L_ID,BORROWER,BOOK,ISSUER,ISS_DATE,RECEIVER,RET_DATE,FINE_PAID) values (?,?,?,?,?,?,?,?)";
+			template = "INSERT INTO finepaid(L_ID,BORROWER,BOOK,ISSUER,ISS_DATE,RECEIVER,RET_DATE,FINE_PAID) values (?,?,?,?,?,?,?,?)";
 			PreparedStatement stmt = con.prepareStatement(template);
 
 			stmt.setInt(1, i + 1);
